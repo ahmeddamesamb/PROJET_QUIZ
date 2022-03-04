@@ -1,0 +1,260 @@
+:root{
+    --success-color:#2ecc71;
+    --error-color:#e74c3c;
+}
+.form-Control input:focus{
+    outline:0;
+    border-color:#777 ;
+}
+.form-Control.success input{
+border-color:var(--success-color);
+}
+.form-Control.error input{
+    border-color:var(--error-color);
+}
+.form-Control small{
+    color:var(--error-color);
+    /* position:absolute; */
+    /* bottom:0; */
+
+    left:0;
+    visibility:hidden;
+}
+.form-Control.error small{
+    visibility:visible;
+}
+.form-Control{
+    display: flex;
+   margin-top: 5rem;
+   margin-left: 2.5rem;
+   margin-right: 2.5rem;
+   align-items: center;
+   position: relative;
+   flex-direction: column;
+   background-color:#052426;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../images/imge.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+.div-hed{
+    background-color:#052426;
+    height:5vw;
+    display: flex;
+    align-items:center;
+    
+}
+.imag2{
+    display: flex;
+    height:12vh;
+    left:50px;
+}
+#h1{
+    color:white;
+    display: flex;
+    margin-left: 50rem;
+
+}
+form{
+    position: absolute;
+    left: 35%;
+    top: 20%;
+    border-radius:20px ;
+    height: 70vh;
+    width: 35vw;
+}
+.div-h1{
+    background-color:#51bfd0;
+    color:white;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    
+}.div-inpu{
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    height: 40vh;
+}
+.div1{
+   display: flex;
+   margin-top: 5rem;
+   margin-left: 2.5rem;
+   margin-right: 2.5rem;
+   align-items: center;
+   position: relative;
+   flex-direction: column
+   
+}
+.div2{
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    align-items: center;
+    position: relative;
+}
+input{
+    height: 8vh;
+    width: 100%;
+    border-radius: 13px;
+    border: none;
+    background:#f0eef1;
+    border:#51bfd0;
+}
+
+
+img{
+    height: 3vh;
+    display: flex;
+   
+}
+.im2{
+    position: absolute;
+    margin-left: 33rem;
+    top: 18px;
+}
+small{
+    position: absolute;
+    left: 0;
+    bottom:0;
+}
+.div-submit{
+    display: flex;
+    background-color:white;
+    justify-content:space-evenly;
+    align-items:center;
+    height: 10vh;
+}
+a{
+    font-size: 25px;
+text-decoration: none;
+color: #a4a4a4;
+}
+#submit{
+       color:white;
+       background-color:#51bfd0;
+       width: 15vw;
+       border-radius:13px ;
+       border:none;
+       font-size: 15px;
+    height: 8vh;
+
+}
+.container{
+    border: 2px solid black;
+}
+.header{
+    
+    height: 12vh;
+    margin-top: 1rem;
+    background:#51bfd0;
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bouton{
+    padding: 1rem;
+    background:#67d8d4;
+    border:none;
+    border-radius: 10px ;
+    color:#fff;
+}
+#h1{
+    margin-left: 40rem;
+}
+.main{
+    height: 73vh;
+    display: flex;
+    background:white;
+
+}
+.main-gauche{
+    
+   width:40vw;
+   margin: 3rem;
+   display: flex;
+   flex-direction: column;
+}
+.img-re{
+    height: 10vh;
+    width: 5vw;
+    border-radius:50%;
+   
+}
+#avatar{
+height:20vh;
+background:#67d8d4;
+display: flex;
+justify-content:space-around;
+align-items:center;
+
+}
+#list{
+    display: flex;
+    flex-direction:column;
+    border:1px solid rgba(0, 0, 0, 0.164);
+}
+#list div {
+
+display: flex;
+padding: 1.5rem;
+justify-content:space-between;
+}
+.main-droite{
+    border:1px solid rgba(0, 0, 0, 0.164);
+    
+    width:70vw;
+   margin: 2rem;
+}
+.main-droite form{
+display: flex;
+flex-direction: column;
+justify-content:center;
+align-items:center;
+width:15vw;
+height:65vh;
+margin-left: 10rem;
+margin-top: 6rem;
+}
+.main-droite form img{
+    height:35vh;
+    border-radius:50%;
+    position:absolute;
+    border:1px solid #51bfd0;
+    left: 35vw;
+    
+}
+
+.main-droite form input{
+    height:3rem;
+}
+    .main-droite form .fichier{
+display: flex;
+font-size:0.7em;
+}
+.main-droite form .fichier a{
+    
+    font-size:1.5em;
+    }
+    .main-droite form button{
+        padding: 1rem;
+        background:#51bfd0;
+        text-decoration: none;
+        border-radius: 10px;
+}
+        
+    
