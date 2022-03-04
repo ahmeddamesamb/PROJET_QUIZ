@@ -1,8 +1,7 @@
 {
-    "users":[
-        {
-            "email":"asamb650@gmail.com",
-            "password":"roosc9"
-        }
-    ]
+    "users": [{
+        "email": "asamb650@gmail.com",
+        "password": "roosc9",
+        "role": "ROLE_ADMIN"
+    }]
 }
