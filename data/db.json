@@ -1,8 +1,36 @@
 {
     "users":[
-        {
+
+        {  
+            "nom": "Samb",
+            "prenom":"Ahmed",
             "email":"asamb650@gmail.com",
-            "password":"roosc9"
-        }
+            "password":"roosc9",
+            "role": "ADMIN",
+            "score": "15"
+        },
+        {
+            "nom": "Sarr",
+            "prenom":"Mouhamed",
+            "email":"asam@gmail.com",
+            "password":"booscoof9",
+            "role": "JOUEUR",
+            "score": "1"   
+        },
+        {"nom":"Diouf",
+            "prenom":"Mor",
+            "email":"darou@gmail.com",
+            "password":"khoudoss9",
+            "role": "JOUEUR",
+            "score": "10"
+       },
+      {
+            "nom": "Niass",
+            "prenom":"Khadim",
+            "email":"niass0@gmail.com",
+            "password":"touba90",
+            "role": "JOUEUR",
+            "score": "12"
+     }
     ]
 }
