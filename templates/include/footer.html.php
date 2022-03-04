@@ -1,4 +1,4 @@
-<script src="<?=PATH_POST."js".DIRECTORY_SEPARATOR."scrip.js"?>"> </script
+<!-- <script src="<?=PATH_POST."js".DIRECTORY_SEPARATOR."scrip.js"?>"> </script> -->
 
 </body>
 </html> 

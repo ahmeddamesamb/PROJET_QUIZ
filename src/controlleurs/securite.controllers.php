@@ -13,15 +13,40 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
       
       $login=$_POST['email'];
       $password=$_POST['password'];
-    
+      
       connexion($login,$password);  
      }
     }
 }
+
+if($_SERVER['REQUEST_METHOD']=="GET"){
+  if(isset($_REQUEST['action'])){
+     if ($_REQUEST['action']=="connexion") {
+     
+     // echo"charger la page de connexion";
+       require_once(PATH_TEMPLATES."securite/connexion.html.php"); 
+     }
+     elseif($_REQUEST['action']=="inscription"){
+     //chargement de la page d inscription
+     require_once(PATH_TEMPLATES."securite/inscription.html.php"); 
+    }
+    elseif($_REQUEST['action']=="deconnexion"){
+    deconnexion();
+
+    }
+    
+   else{
+   require_once(PATH_TEMPLATES."securite/connexion.html.php"); 
+   }
+}
+else{
+ require_once(PATH_TEMPLATES."securite/connexion.html.php"); 
+
+}
+} 
     
  
     function connexion(string $login,string $password):void {
-     
       $errors=[];
       champ_obligatoire('login',$login,$errors,"login obligatoire");
       if(count($errors)==0){
@@ -55,26 +80,12 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         exit();
       }
      }
+     // FONCTION DECONNEXION
+     function deconnexion(){
+       session_destroy();
+       session_unset();
+       header("location:".PATH_POST);
+      exit();
+     }
     
    
-    if($_SERVER['REQUEST_METHOD']=="GET"){
-       if(isset($_REQUEST['action'])){
-          if ($_REQUEST['action']=="connexion") {
-          
-          // echo"charger la page de connexion";
-            require_once(PATH_TEMPLATES."securite/connexion.html.php"); 
-          }
-          elseif($_REQUEST['action']=="inscription"){
-          //chargement de la page d inscription
-          require_once(PATH_TEMPLATES."securite/inscription.html.php"); 
-     
-         }
-        else{
-        require_once(PATH_TEMPLATES."securite/connexion.html.php"); 
-        }
-     }
-     else{
-      require_once(PATH_TEMPLATES."securite/connexion.html.php"); 
-
-     }
-    }

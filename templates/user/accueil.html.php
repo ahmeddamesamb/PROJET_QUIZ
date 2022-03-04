@@ -5,7 +5,9 @@
     <div class="container">
        <div class="header">
         <h1 id="h1">CREER ET PARAMETRER VOS QUIZ</h1>
-        <button class="bouton">Deconnexion</button>
+        
+        <a href="<?=PATH_POST.'?controlleurs=securite&action=deconnexion'?>" class="bouton">Deconnexion</a>
+
        </div>
        <div class="main">
           <div class="main-gauche">
