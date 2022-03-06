@@ -12,7 +12,6 @@
         break;
         case "user" :
         require_once(PATH_SRC."controlleurs/user.controllers.php");
-
         break;
         default :require_once(PATH_SRC."controlleurs/erreur.controllers.php");
         }

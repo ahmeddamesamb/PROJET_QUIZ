@@ -87,17 +87,9 @@ form.addEventListener('submit',function(e){
 
   //  SI LE LOGIN ET LE MOT DE PASSE SONT VALIDE ON DEBLOC LE FORMULAIRE ON
 
-//     if(isValidEmail(email.value) && isValidPassword(password)){
-//         e.target.submit
-
-
-
-
-
-
-
-
-
+    if(isValidEmail(email.value) && isValidPassword(password)){
+        e.target.submit();
+    }
 
 //     }
 

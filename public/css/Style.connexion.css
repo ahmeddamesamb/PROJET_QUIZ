@@ -32,6 +32,8 @@ border-color:var(--success-color);
    position: relative;
    flex-direction: column;
    background-color:#052426;
+   width: 30vw;
+   
 }
 
 *{
@@ -85,6 +87,8 @@ form{
     flex-direction: column;
     background-color:white;
     height: 40vh;
+    /* justify-content:center; */
+    align-items: center;
 }
 .div1{
    display: flex;
@@ -225,36 +229,49 @@ display: flex;
 flex-direction: column;
 justify-content:center;
 align-items:center;
-width:15vw;
+width:30vw;
 height:65vh;
 margin-left: 10rem;
 margin-top: 6rem;
 }
 .main-droite form img{
-    height:35vh;
+    /* height:35vh; */
     border-radius:50%;
     position:absolute;
     border:6px solid #51bfd0;
     left: 35vw;
     
 }
+.fichier{
+    display: flex;
+justify-content:space-between;
+width:100%;
+
+}
 
 .main-droite form input{
     height:3rem;
+    width:55vh;
 }
     .main-droite form .fichier{
 display: flex;
 font-size:0.7em;
 }
-.main-droite form .fichier a{
-    
-    font-size:1.5em;
+.fichier-choix{
+    background:#51bfd0;
+    text-decoration: none;
+    border-radius: 10px;
+width:1rem;;
+    font-size:0.5em;
+    color:#fff;
+    font-size: 1rem;
     }
     .main-droite form button{
         padding: 1rem;
         background:#51bfd0;
         text-decoration: none;
         border-radius: 10px;
+        
 }
         
     

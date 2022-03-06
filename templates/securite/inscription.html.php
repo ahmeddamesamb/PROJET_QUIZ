@@ -10,10 +10,12 @@
 </head>
 <body>
     
-<div class="div-hed">
-            <img class="imag2" src="<?=PATH_POST."images".DIRECTORY_SEPARATOR."icones".DIRECTORY_SEPARATOR."logo-QuizzSA.png"?>" alt="">
-            <h1 id="h1">Le plaisir de jouer</h1>
-        </div>
+<?php
+      
+      require_once(PATH_TEMPLATES."include/header.html.php"); 
+?> 
+
+?>
     <form action="" method="POST">
       <div class="div-hed1">
          <h1>S'INSCRIR</h1> 
@@ -25,28 +27,29 @@
           <label>
               Prenom
           </label>
-          <input type="text" name="prenom" placeholder="veiller saisir votre prenom">
+          <input class="form_input_inscription" type="text" name="prenom" placeholder="veiller saisir votre prenom">
 
           <label>
               Nom
           </label>
-          <input type="text" name="nom" placeholder="veiller saisir votre nom">
+          <input class="form_input_inscription" type="text" name="nom" placeholder="veiller saisir votre nom">
           <label>
               Login
           </label>
-          <input type="email" name="email" placeholder="veiller saisir votre Email">
+          <input class="form_input_inscription" type="email" name="email" placeholder="veiller saisir votre Email">
           <label>
               Password
           </label>
-          <input type="password" name="password" placeholder="password">
+          <input class="form_input_inscription" type="password" name="password" placeholder="password">
           <label>
               Confirmer password
           </label>
-          <input type="password" name="confirmpassword" placeholder="confirm-password">
+          <input class="form_input_inscription" type="password" name="confirmpassword" placeholder="confirm-password">
       </div>
       <div class="fichier">
       <h1>Avatar</h1>
-      <a href="">Choisir Fichier</a>
+      <input type="file" >
+      
       </div>
       <button>Créer compte</button>
     </form>

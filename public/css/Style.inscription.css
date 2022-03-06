@@ -68,7 +68,7 @@ body{
     align-items:center;
 
 }
-input{
+.form_input_inscription{
     padding: 1rem;
     border: 2px solid rgb(11, 199, 212);
     width:50%;
