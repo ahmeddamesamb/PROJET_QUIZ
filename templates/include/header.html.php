@@ -13,7 +13,7 @@
     <div class="div-hed" id="div-hed">
         <img class="imag2" src="<?=PATH_POST."images".DIRECTORY_SEPARATOR."icones".DIRECTORY_SEPARATOR."logo-QuizzSA.png"?>" alt="">
         <h1 id="h1">Le plaisir de jouer</h1>
-        <?php if (is_connect())  : ?>
+        <?php if (is_connect() && is_JOUEUR())  : ?>
                 <a href="<?=PATH_POST.'?controlleurs=securite&action=deconnexion'?>" class="bouton">Deconnexion</a>
         <?php endif; ?>
     </div>

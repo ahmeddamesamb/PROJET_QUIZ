@@ -46,7 +46,7 @@
                 <!-- btnSubmit -->
                 <div class="div-submit">
                     <!-- <input type="submit" name="submit" id='submit' value='connexion' > -->
-                    <button type="submit" >connexion</button>
+                    <button id="btn" type="submit" >connexion</button>
                    <a href="<?= PATH_POST."?controlleurs=securite&action=inscription" ?>">S'inscrir pour jouer</a>
                 </div
             </form>

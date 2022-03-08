@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?=PATH_POST."css".DIRECTORY_SEPARATOR."Style.inscription.css"?>"  >
-
-    <title>Inscription Joueur</title>
-</head>
-<body>
-    
-<?php
-      
-      require_once(PATH_TEMPLATES."include/header.html.php"); 
-?> 
-
-
-    <form action="" method="POST">
+<form action="" method="POST">
       <div class="div-hed1">
          <h1>S'INSCRIR</h1> 
          <p>Pour tester votre niveau de culture générale</p>
@@ -55,7 +37,5 @@
           <input type="file" id="fichie" >
       
       </div>
-      <button id="btn">Créer compte</button>
+      <button>Créer compte</button>
     </form>
-</body>
-</html>
