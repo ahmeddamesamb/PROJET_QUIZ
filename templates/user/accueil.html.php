@@ -1,6 +1,13 @@
 
     <?php
             require_once(PATH_TEMPLATES."include/header.html.php"); 
+            $action = '';
+            if (isset($_GET['action'])) {
+               $action = $_GET['action'];
+               $action1 = $_GET['action'];
+               $action2 = $_GET['action'];
+               $action3 = $_GET['action'];
+            }
     ?> 
 
             
@@ -18,20 +25,20 @@
              <h1>admin</h1>
             </div>
             <div id="list">
-               <div>
-               <a href="<?=PATH_POST."?controlleurs=user&action=creer.admin"?>">Creer Questions</a>
+               <div class="<?= $action=='creer.admin' ? 'active' : '' ?>">
+               <a href="<?=PATH_POST."?controlleurs=user&action=creer.admin"?>">Liste Questions</a>
                <img src="<?=PATH_POST."images".DIRECTORY_SEPARATOR."icones".DIRECTORY_SEPARATOR."ic-liste.png"?> ">
                </div>
-               <div>
+               <div class="<?= $action=='inscription_adm' ? 'active' : '' ?>">
                <a href="<?= PATH_POST."?controlleurs=user&action=inscription_adm" ?>">Creer Admin</a>
                <img src="<?=PATH_POST."images".DIRECTORY_SEPARATOR."icones".DIRECTORY_SEPARATOR."ic-ajout-active.png"?> ">
                </div>
-               <div>
-               <a href="<?= PATH_POST."?controlleurs=user&action=listeJ" ?>">List Joueur</a>
+               <div class="<?= $action=='listeJ' ? 'active' : '' ?>">
+               <a href="<?= PATH_POST."?controlleurs=user&action=listeJ" ?>">Liste Joueur</a>
                <img src="<?=PATH_POST."images".DIRECTORY_SEPARATOR."icones".DIRECTORY_SEPARATOR."ic-liste.png"?> ">
                </div>
-               <div>
-               <a href="<?= PATH_POST."?controlleurs=user&action=listQuest" ?>">List Questions</a>
+               <div class="<?= $action=='listQuest' ? 'active' : '' ?>">
+               <a href="<?= PATH_POST."?controlleurs=user&action=listQuest" ?>">Creer Questions</a>
                <img src="<?=PATH_POST."images".DIRECTORY_SEPARATOR."icones".DIRECTORY_SEPARATOR."ic-ajout.png"?> ">
                </div>
               
@@ -40,7 +47,7 @@
 
 <div class="main-droite">
 
-<?= $page?>
+<?= $page  ?>
 
 </div>
        

@@ -8,34 +8,73 @@
 }
 .form-Control.success input{
 border-color:var(--success-color);
+box-shadow: 0 0 5px 1px greenyellow;
 }
 .form-Control.error input{
     border-color:var(--error-color);
+    box-shadow: 0 0 5px 1px red;
 }
-.form-Control small{
-    color:var(--error-color);
-    /* position:absolute; */
-    /* bottom:0; */
-
-    left:0;
-    visibility:hidden;
+label{
+    color:#51bfd0;
+    font-weight: bold;  
 }
-.form-Control.error small{
-    visibility:visible;
-}
-.form-Control{
-    display: flex;
-   margin-top: 5rem;
-   margin-left: 2.5rem;
-   margin-right: 2.5rem;
-   align-items: center;
-   position: relative;
-   flex-direction: column;
-   background-color:#052426;
-   width: 30vw;
-   
+label:hover{
+    color:#2ecc71;
+    font-weight: bold;  
 }
 
+#div1{
+
+width:40%;
+margin:1rem;
+margin-top: 7rem;
+border-radius:12px;
+border: 2px solid #67d8d4;
+}
+#div2{
+    width:40%;
+    margin:1rem;
+    margin-top: 1rem;
+    border-radius:12px;
+    border: 2px solid #67d8d4;   
+}
+
+/* Juste pour que notre exemple soit plus joli */
+
+  input[type=email]{
+    -webkit-appearance: none;
+  
+    font-family: inherit;
+    font-size: 90%;
+    box-sizing: border-box;
+  }
+
+  /* Voici notre composition pour les champs invalides */
+  input:invalid{
+    border-color: #900;
+    background-color: #FDD;
+  }
+  
+  input:focus:invalid {
+    outline: none;
+  }
+  
+  /* Voici la mise en forme pour les erreurs */
+  .error {
+    width  : 100%;
+    padding: 0;
+  
+    font-size: 80%;
+    color: white;
+    
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+  }
+  
+  .error.active {
+    padding: 0.3em;
+  }
+  
 *{
     margin: 0;
     padding: 0;
@@ -71,7 +110,7 @@ form{
     top: 20%;
     border-radius:20px ;
     height: 70vh;
-    width: 35vw;
+    width: 15vw;
 }
 .div-h1{
     background-color:#51bfd0;
@@ -118,8 +157,6 @@ form{
     background:#f0eef1;
     border:#51bfd0;
 }
-
-
 img{
     height: 3vh;
     display: flex;
@@ -184,6 +221,8 @@ color: #a4a4a4;
     height: 73vh;
     display: flex;
     background:white;
+    border: 2px solid rgb(11, 199, 212);
+    
 
 }
 .main-gauche{
@@ -210,13 +249,24 @@ align-items:center;
 #list{
     display: flex;
     flex-direction:column;
-    border:1px solid rgba(0, 0, 0, 0.164);
+    border:2px solid rgba(0, 0, 0, 0.164);
 }
 #list div {
 
 display: flex;
 padding: 1.5rem;
 justify-content:space-between;
+border-left: 3px solid rgb(240, 244, 240);
+margin: 1% 0;
+}
+.active{
+    background-color:rgba(213, 222, 222, 0.509);
+    border-color: rgb(15, 165, 15);
+}
+#list div:hover{
+    background-color:rgba(213, 222, 222, 0.509);
+    border-color: rgb(15, 165, 15);
+
 }
 .main-droite{
     border:1px solid rgba(0, 0, 0, 0.164);
@@ -276,8 +326,6 @@ width:1rem;;
 #div-main-droite-container{
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
     font-size: 1rem;
 }
 #div-main-droite-container1{
@@ -328,8 +376,6 @@ border:none;
 #div-creerUestion-container1 input{
     padding: 1rem;
 }
-
-
 .contai{
     display: block;
     position: relative;
@@ -391,8 +437,257 @@ border:none;
     width: 5px;
     height: 10px;
     border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  
   }
+
+
+table{
+width:100%;
+font-size:2rem;
+color:#948778;
+}
+td{
+text-align: center;
+
+}
+/******JOB BU LOL*******/
+
+.form {
+	padding: 30px 40px;	
+}
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form-control input {
+	border: 2px solid #67d8d4;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control i {
+	visibility: hidden;
+	position: absolute;
+	top: 40px;
+	right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form button {
+	background-color: #67d8d4;
+	border: 2px solid #67d8d4;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+}
+
+/* SOCIAL PANEL CSS */
+.social-panel-container {
+	position: fixed;
+	right: 0;
+	bottom: 80px;
+	transform: translateX(100%);
+	transition: transform 0.4s ease-in-out;
+}
+
+.social-panel-container.visible {
+	transform: translateX(-10px);
+}
+
+.social-panel {	
+	background-color: #fff;
+	border-radius: 16px;
+	box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
+	border: 5px solid #001F61;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Muli';
+	position: relative;
+	height: 169px;	
+	width: 370px;
+	max-width: calc(100% - 10px);
+}
+
+.social-panel button.close-btn {
+	border: 0;
+	color: #97A5CE;
+	cursor: pointer;
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.social-panel button.close-btn:focus {
+	outline: none;
+}
+
+.social-panel p {
+	background-color: #001F61;
+	border-radius: 0 0 10px 10px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 2px 17px 6px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin: 0;
+	transform: translateX(-50%);
+	text-align: center;
+	width: 235px;
+}
+
+.social-panel p i {
+	margin: 0 5px;
+}
+
+.social-panel p a {
+	color: #FF7500;
+	text-decoration: none;
+}
+
+.social-panel h4 {
+	margin: 20px 0;
+	color: #97A5CE;	
+	font-family: 'Muli';	
+	font-size: 14px;	
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.social-panel ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.social-panel ul li {
+	margin: 0 10px;
+}
+
+.social-panel ul li a {
+	border: 1px solid #DCE1F2;
+	border-radius: 50%;
+	color: #001F61;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 50px;
+	text-decoration: none;
+}
+
+.social-panel ul li a:hover {
+	border-color: #FF6A00;
+	box-shadow: 0 9px 12px -9px #FF6A00;
+}
+
+.floating-btn {
+	border-radius: 26.5px;
+	background-color: #001F61;
+	border: 1px solid #001F61;
+	box-shadow: 0 16px 22px -17px #03153B;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 12px 20px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 999;
+}
+
+.floating-btn:hover {
+	background-color: #ffffff;
+	color: #001F61;
+}
+
+.floating-btn:focus {
+	outline: none;
+}
+
+.floating-text {
+	background-color: #001F61;
+	border-radius: 10px 10px 0 0;
+	color: #fff;
+	font-family: 'Muli';
+	padding: 7px 15px;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	z-index: 998;
+}
+
+.floating-text a {
+	color: #FF7500;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+
+	.social-panel-container.visible {
+		transform: translateX(0px);
+	}
+	
+	.floating-btn {
+		right: 10px;
+	}
+}

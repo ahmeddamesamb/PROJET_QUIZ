@@ -1,41 +1,96 @@
-<form action="" method="POST">
-      <div class="div-hed1">
-         <h1>S'INSCRIR</h1> 
-         <p>Pour tester votre niveau de culture générale</p>
-      </div>
-        <div id="div-avatar">
-        <img class="avatar"  src="<?=PATH_POST."images".DIRECTORY_SEPARATOR."avatar.jpg"?>" alt="">
-        </div>
-      <div class="div-labint">
-          <label>
-              Prenom
-          </label>
-          <input class="form_input_inscription" type="text" name="prenom" placeholder="veiller saisir votre prenom">
+<?php
+	  if (isset($_SESSION[KEY_ERRORS])){
+        $errors=$_SESSION[KEY_ERRORS];
+        unset($_SESSION[KEY_ERRORS]);
+    }
+?>
+<div id="aly">
+ 
+	<form id="form" class="form" method="POST" novalidate action="<?=PATH_POST?>">
+     
+		<input type="hidden" name="controlleurs" value="securite">
+		<input type="hidden" name="action" value="inscription">
 
-          <label>
-              Nom
-          </label>
-          <input class="form_input_inscription" type="text" name="nom" placeholder="veiller saisir votre nom">
-          <label>
-              Login
-          </label>
-          <input class="form_input_inscription" type="email" name="email" placeholder="veiller saisir votre Email">
-          <label>
-              Password
-          </label>
-          <input class="form_input_inscription" type="password" name="password" placeholder="password">
-          <label>
-              Confirmer password
-          </label>
-          <input class="form_input_inscription" type="password" name="confirmpassword" placeholder="confirm-password">
-      </div>
+        
 
-      <div class="fichier">
-          <h1>Avatar</h1>
-          
-          <label for="fichie" id="lab">choisir un fichier</label>
-          <input type="file" id="fichie" >
-      
-      </div>
-      <button>Créer compte</button>
-    </form>
+		<div class="form-control">
+		<label for="username">PRENOM</label>
+		<input type="text" placeholder="veiller saisir votre prenom" id="username" name="username" />
+		<i class="fas fa-check-circle"></i>
+		<i class="fas fa-exclamation-circle"></i>
+		<small>Error message</small>
+
+		<?php if (isset($errors['prenom'])):?> 
+            <p style="color:red"  ><?=$errors['prenom'];?></p>
+        <?php endif?>
+
+		</div>
+		<div class="form-control">
+		<label for="name">NOM</label>
+		<input type="text" placeholder="veiller saisir votre nom" id="name" name="name" />
+		<i class="fas fa-check-circle"></i>
+		<i class="fas fa-exclamation-circle"></i>
+		<small>Error message</small>
+
+		<?php if (isset($errors['nom'])):?> 
+            <p style="color:red"  > <?=$errors['nom'];?></p>
+        <?php endif?>
+
+
+		</div>
+		<div class="form-control">
+		<label for="email">Email</label>
+		<input type="email" placeholder="veiller saisir votre @dresse Email" id="email" name="email" />
+		<i class="fas fa-check-circle"></i>
+		<i class="fas fa-exclamation-circle"></i>
+		<small>Error message</small>
+
+		<?php if (isset($errors['email'])):?> 
+            <p style="color:red"  > <?=$errors['email'];?></p>
+        <?php endif?>
+
+
+		</div>
+		<div class="form-control">
+		<label for="password">Password</label>
+		<input type="password" placeholder="saisir votre Password" id="password" name="password"/>
+		<i class="fas fa-check-circle"></i>
+		<i class="fas fa-exclamation-circle"></i>
+		<small>Error message</small>
+
+		<?php if (isset($errors['password'])):?> 
+            <p style="color:red"  > <?=$errors['password'];?></p>
+        <?php endif?>
+
+
+		</div>
+		<div class="form-control">
+		<label for="password2">Password Confirm</label>
+		<input type="password" placeholder="veiller confirmer" id="password2" name="password2"/>
+		<i class="fas fa-check-circle"></i>
+		<i class="fas fa-exclamation-circle"></i>
+		<small>Error message</small>
+
+		<?php if (isset($errors['password2'])):?> 
+            <p style="color:red"  > <?=$errors['password2'];?></p>
+        <?php endif?>
+
+
+		</div>
+		<input type="file" id="file" name="file"/>
+		
+		<button>Submit</button>
+	</form>
+	
+	
+	<div id="wane">
+		<label for="file" >
+			<img id="imgup" class="avatar"  src="<?=PATH_POST."images".DIRECTORY_SEPARATOR."avatar.jpg"?>" alt="">
+
+		</label>
+	</div>
+</div>
+
+
+
+<!-- <script src="<?=PATH_POST."js".DIRECTORY_SEPARATOR."inscription.js"?>"> </script> -->
