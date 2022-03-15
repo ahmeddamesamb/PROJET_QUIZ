@@ -1,148 +1,23 @@
 {
-  "users": [
-    {
-      "nom": "Samb",
-      "prenom": "Ahmed",
-      "email": "asamb650@gmail.com",
-      "password": "roosc9",
-      "role": "ADMIN",
-      "score": "15"
-    },
-    {
-      "nom": "Sarr",
-      "prenom": "Mouhamed",
-      "email": "asam@gmail.com",
-      "password": "booscoof9",
-      "role": "JOUEUR",
-      "score": "1"
-    },
-    {
-      "nom": "Diouf",
-      "prenom": "Mor",
-      "email": "darou@gmail.com",
-      "password": "khoudoss9",
-      "role": "JOUEUR",
-      "score": "10"
-    },
-    {
-      "nom": "Niass",
-      "prenom": "Khadim",
-      "email": "niass0@gmail.com",
-      "password": "touba90",
-      "role": "JOUEUR",
-      "score": "12"
-    },
-    {
-      "nom": "Laye",
-      "prenom": "Mbene",
-      "email": "Thiaw@gmail.com",
-      "password": "touba90",
-      "role": "JOUEUR",
-      "score": "9"
-    },
-    {
-      "nom": "ka",
-      "prenom": "Kh",
-      "email": "niass0@gmail.com",
-      "password": "touba90",
-      "role": "JOUEUR",
-      "score": "12"
-    },
-    {
-      "nom": "Diop",
-      "prenom": "Khadim",
-      "email": "niass0@gmail.com",
-      "password": "touba90",
-      "role": "JOUEUR",
-      "score": "12"
-    },
-    {
-      "nom": "Sene",
-      "prenom": "NdeyeFatou",
-      "email": "niass0@gmail.com",
-      "password": "touba90",
-      "role": "JOUEUR",
-      "score": "12"
-    },
-    {
-      "nom": "kar",
-      "prenom": "Khoudia",
-      "email": "niass0@gmail.com",
-      "password": "touba90",
-      "role": "JOUEUR",
-      "score": "12"
-    },
-    {
-      "nom": "mbaye",
-      "prenom": "abdou wahab",
-      "email": "niass0@gmail.com",
-      "password": "touba90",
-      "role": "JOUEUR",
-      "score": "12"
-    },
-    {
-      "nom": "ka",
-      "prenom": "Kh",
-      "email": "niass0@gmail.com",
-      "password": "touba90",
-      "role": "JOUEUR",
-      "score": "12"
-    },
-    {
-      "nom": "ka",
-      "prenom": "Kh",
-      "email": "niass0@gmail.com",
-      "password": "touba90",
-      "role": "JOUEUR",
-      "score": "12"
-    },
-    {
-      "nom": "ka",
-      "prenom": "Kh",
-      "email": "niass0@gmail.com",
-      "password": "touba90",
-      "role": "JOUEUR",
-      "score": "12"
-    },
-    {
-      "nom": "sall",
-      "prenom": "macky",
-      "email": "niass0@gmail.com",
-      "password": "touba90",
-      "role": "JOUEUR",
-      "score": "1"
-    },
-    {
-      "nom": "dame",
-      "prenom": "ahmed",
-      "email": "moustaph@gmail.com",
-      "password": "tamba999",
-      "role": "JOUEUR",
-      "score": 0
-    },
-    {
-      "nom": "mbodj",
-      "prenom": "mouhamed",
-      "email": "mbodj@gmail.com",
-      "password": "saintlouis99",
-      "role": "JOUEUR",
-      "score": 0
-    },
-    {
-      "nom": "diop",
-      "prenom": "selle",
-      "email": "diop12@gmail.com",
-      "password": "dakar1234",
-      "role": "ADMIN",
-      "score": 0
-    },
-    {
-      "nom": "diop",
-      "prenom": "bayemor",
-      "email": "diopoi@gmail.com",
-      "password": "saliou000",
-      "role": "JOUEUR",
-      "score": 0
-    }
-  ]
+    "users": [
+        {
+            "nom": "Samb",
+            "prenom": "Ahmed",
+            "email": "asamb650@gmail.com",
+            "password": "roosc9",
+            "role": "ADMIN",
+            "score": "15",
+            "avatar": "asamb_ADMIN.jpg"
+        },
+      
+        {
+            "nom": "Cleo Castaneda",
+            "prenom": "vozokop123",
+            "email": "joqo@gmail.com",
+            "password": "vozokop123",
+            "role": "ADMIN",
+            "score": 0,
+            "avatar": "joqo_ADMIN.png"
+        }
+    ]
 }

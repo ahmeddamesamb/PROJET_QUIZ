@@ -14,8 +14,9 @@ box-shadow: 0 0 5px 1px greenyellow;
     border-color:var(--error-color);
     box-shadow: 0 0 5px 1px red;
 }
+
 label{
-    color:#51bfd0;
+    
     font-weight: bold;  
 }
 label:hover{
@@ -274,23 +275,14 @@ margin: 1% 0;
     width:70vw;
    margin: 2rem;
 }
-.main-droite form{
-display: flex;
-flex-direction: column;
-justify-content:center;
-align-items:center;
-width:30vw;
-height:65vh;
-margin-left: 10rem;
-margin-top: 6rem;
-}
+
 .main-droite form img{
-    /* height:35vh; */
-    border-radius:50%;
-    position:absolute;
-    border:6px solid #51bfd0;
-    left: 35vw;
-    
+    /*height:35vh;
+    /* /border-radius:50%; */
+    /* position:absolute; */
+    /* border:6px solid #51bfd0; */
+    /* left: 35vw; */
+
 }
 .fichier{
     display: flex;
@@ -299,10 +291,7 @@ width:100%;
 
 }
 
-.main-droite form input{
-    height:3rem;
-    width:55vh;
-}
+
     .main-droite form .fichier{
 display: flex;
 font-size:0.7em;
@@ -316,34 +305,7 @@ width:1rem;;
     color:#fff;
     font-size: 1rem;
     }
-    .main-droite form button{
-        padding: 1rem;
-        background:#51bfd0;
-        text-decoration: none;
-        border-radius: 10px;
-        
-}
-#div-main-droite-container{
-    display: flex;
-    flex-direction: column;
-    font-size: 1rem;
-}
-#div-main-droite-container1{
-    border: 3px solid#51bfd0;
-    height: 65vh;
-}
-#div-main-droite-container h1{
-    color:#51bfd0;
-    
-}
-#div-main-droite-container label{
-    font-size: 2rem;    
-}
 
-#div-main-droite-container1 div{
-    display: flex;
-    margin-top: 2rem;
-}
 #div22{
     width:15vw;
 }
@@ -354,18 +316,19 @@ width:1rem;;
 }
 #div-head1{
     display: flex;
-    gap: 1rem;
+margin: 100%;
+    
 }
-#div-head1 span{
-    border: 1px solid rgba(0, 0, 0, 0.254);
-    padding: 2rem;
-    height: 2rem;
-}
-#div-head1 h1{
- display: flex;
- justify-content:center;
- align-items:center;
 
+#div-head1 h2{
+ display: flex;
+ font-size:1rem;
+ 
+
+}
+.form-button-input{
+margin-left: 20%;
+display: flex;
 }
 #div-head1 button{
 width:3rem;

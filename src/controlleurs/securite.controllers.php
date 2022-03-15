@@ -17,8 +17,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
      else if($_POST['action']=="inscription"){ 
       $tab=[];
       recupere_infos($tab);
-      enregistUser($tab);
-      
+      enregistUser($tab);  
      }
     }
 }
@@ -44,6 +43,9 @@ else{
  require_once(PATH_TEMPLATES."securite/connexion.html.php"); 
 }
 } 
+
+
+     //*===================FONCTIONS DE CONNEXION ==================================
     function connexion(string $login,string $password):void {
       $errors=[];
       champ_obligatoire('login',$login,$errors,"login obligatoire");
@@ -77,13 +79,14 @@ else{
           exit();
       }
      }
-     // FONCTION DECONNEXION
+     //*===================FONCTIONS DE DECONNEXION==================================
      function deconnexion(){
         session_destroy();
         session_unset();
         header("location:".PATH_POST);
         exit();
      }
+     //*======FONCTIONS QUI RECUPERE NON DONNEE DE L INSCRIPTIONS====================
      function recupere_infos(&$tab){
       $tab['nom'] = segue($_POST['name']);
       $tab['prenom'] = segue($_POST['username']);
@@ -93,9 +96,13 @@ else{
       $tab['role']= is_admin() ? "ADMIN" : "JOUEUR";
       $tab['score']=0;
      }
+     //*======FONCTIONS QUI FILTRE LES DONNEE ENTRE PAR L UTILISATEUR LORS DE LINSCRIPTION================
+
      function segue(&$inputIns){
       return strip_tags(trim($inputIns));
      }
+     //*======FONCTIONS QUI TESTE L EXISTANCE D UN LOGIN DUNE PERSONNE DANS MA BASE DE DONNEE=============
+
      function test_existance_logins($login,&$errors,$key,$message="login existe"){
       if(existe_login($login)){
         
@@ -105,6 +112,8 @@ else{
 
 
      }
+     //*======FONCTIONS QUI ENREGISTRE LES DONNE DANS LA BASE ET QUI RECUPERE LES ERREUR ET LES AFFICHES AU CHAMPS CORRESPONDANT=========
+
      function enregistUser($tableau){
         $errors=[];
         champ_obligatoire('nom',$tableau['nom'],$errors,"nom obligatoire");
@@ -119,12 +128,18 @@ else{
         champ_obligatoire('password',$tableau['password'],$errors,"password obligatoire");
         champ_obligatoire('password2',$tableau['password2'],$errors,"password2 obligatoire");
 
+        
         test_existance_logins($tableau['email'],$errors,'email',);
-
+        
         if(count($errors)==0){
           recupere_infos($tab);
+          upload('fichier',$tab);
+
           unset($tab['password2']);
+
+          $tab['avatar']=$_FILES["fichier"]['name'];
           
+          // $tab['avatar']=$avat_nom;
           array_to_json("users",$tab);
           
         }else{
@@ -134,9 +149,48 @@ else{
             header("Location:".PATH_POST."?controlleurs=securite&action=inscription");        
           }
           if(is_admin()){
+
             header("Location:".PATH_POST."?controlleurs=user&action=inscription_adm");        
            
           }
         }
      }
+     //*===================FONCTIONS QUI UPLOAD LES IMAGES AVATAR DE NOTRE JOUEUR LORS DE L INSCRIPTION====================
+     function upload($fichier,$tab){
+       
+          if(!empty($_FILES)){
+            
+            $nom_fichier=$_FILES[$fichier]['name'];
+
+            // $renam=$_FILES['fichier']['name'];
+           $nom_extension1= strrchr($nom_fichier,".");
+
+           $vraiNom2= preg_replace('/@gmail.com/','',$tab['email']);
+           $nom_fichier=$vraiNom2."_".$tab['role'].$nom_extension1;
+           $_FILES[$fichier]['name']=$nom_fichier;
+          
+          
+
+            $erreur=$_FILES[$fichier]['error'];
+            $nom_extension= strrchr($nom_fichier,".");
+            $extension_autoriser =array('.png','PNG','jpg','JPG','JPEG','jpeg');
+            $file_tmp_name=$_FILES[$fichier]['tmp_name'];
+            $destination=ROOT.DIRECTORY_SEPARATOR."public".DIRECTORY_SEPARATOR."uploads".DIRECTORY_SEPARATOR.$_FILES[$fichier]['name'];
+
+            move_uploaded_file($file_tmp_name,$destination);
+
+            if($erreur==0){
+              if((in_array($nom_extension,$extension_autoriser))){
+                $retVal= "images charger avec succes";
+              }else{  
+                $retVal="seule les fichier en format png jpg et jpeg sont autoriser" ;
+              }
+            } 
+            else {
+            } 
+
+          }
+        
+     }
+
    

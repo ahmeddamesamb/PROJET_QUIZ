@@ -6,7 +6,7 @@
 ?>
 <div id="aly">
  
-	<form id="form" class="form" method="POST" novalidate action="<?=PATH_POST?>">
+	<form id="form" class="form" method="POST" enctype="multipart/form-data" novalidate action="<?=PATH_POST?>">
      
 		<input type="hidden" name="controlleurs" value="securite">
 		<input type="hidden" name="action" value="inscription">
@@ -77,7 +77,7 @@
 
 
 		</div>
-		<input type="file" id="file" name="file"/>
+		<input type="file" id="file" name="fichier"/>
 		
 		<button>Submit</button>
 	</form>

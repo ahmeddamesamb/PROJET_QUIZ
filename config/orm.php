@@ -11,7 +11,7 @@ function array_to_json(string $key,array $data){
     $dataJson=file_get_contents(PATH_DB);
     $tableau=json_decode($dataJson,true);
     $tableau[$key][] = $data;
-    $add = json_encode($tableau);
+    $add = json_encode($tableau,JSON_PRETTY_PRINT);
     file_put_contents(PATH_DB,$add);
 }
 
