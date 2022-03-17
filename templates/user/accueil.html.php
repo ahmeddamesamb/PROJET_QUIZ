@@ -1,8 +1,15 @@
 
     <?php
             require_once(PATH_TEMPLATES."include/header.html.php"); 
-    ?> 
-    <div class="container">
+            $action = '';
+            if (isset($_GET['action'])) {
+               $action = $_GET['action'];
+               $action1 = $_GET['action'];
+               $action2 = $_GET['action'];
+               $action3 = $_GET['action'];
+            }
+    ?>           
+<div class="container">
        <div class="header">
         <h1 id="h1">CREER ET PARAMETRER VOS QUIZ</h1>
         
@@ -12,69 +19,44 @@
        <div class="main">
           <div class="main-gauche">
             <div id="avatar">
-                <img class="img-re"  src="<?=PATH_POST."images".DIRECTORY_SEPARATOR."b.jpg"?> ">
-             <h1>admin</h1>
+
+
+                <img class="img-re"  src="<?=PATH_POST."uploads".DIRECTORY_SEPARATOR.$_SESSION[KEY_USER_CONNECT]['avatar']?> ">
+                <h1><?=$_SESSION[KEY_USER_CONNECT]['prenom']."  ".$_SESSION[KEY_USER_CONNECT]['nom']?></h1>
+
+
+
+
             </div>
             <div id="list">
-               <div>
-               <a href="">List Questions</a>
+               <div class="<?= $action=='creer.admin' ? 'active' : '' ?>">
+               <a href="<?=PATH_POST."?controlleurs=user&action=creer.admin"?>">Creer Questions</a>
                <img src="<?=PATH_POST."images".DIRECTORY_SEPARATOR."icones".DIRECTORY_SEPARATOR."ic-liste.png"?> ">
                </div>
-               <div>
-               <a href="">Creer Admin</a>
+               <div class="<?= $action=='inscription_adm' ? 'active' : '' ?>">
+               <a href="<?= PATH_POST."?controlleurs=user&action=inscription_adm" ?>">Creer Admin</a>
                <img src="<?=PATH_POST."images".DIRECTORY_SEPARATOR."icones".DIRECTORY_SEPARATOR."ic-ajout-active.png"?> ">
                </div>
-               <div>
-               <a href="">List Joueur</a>
+               <div class="<?= $action=='listeJ' ? 'active' : '' ?>">
+               <a href="<?= PATH_POST."?controlleurs=user&action=listeJ" ?>">Liste Joueur</a>
                <img src="<?=PATH_POST."images".DIRECTORY_SEPARATOR."icones".DIRECTORY_SEPARATOR."ic-liste.png"?> ">
                </div>
-               <div>
-               <a href="">Creer Questions</a>
+               <div class="<?= $action=='listQuest' ? 'active' : '' ?>">
+               <a href="<?= PATH_POST."?controlleurs=user&action=listQuest" ?>">Liste Questions</a>
                <img src="<?=PATH_POST."images".DIRECTORY_SEPARATOR."icones".DIRECTORY_SEPARATOR."ic-ajout.png"?> ">
                </div>
               
             </div>
           </div>
-          <div class="main-droite">
-              
-          <form action="" method="POST">
-      <div class="div-hed1">
-         <h1>S'INSCRIR</h1> 
-         <p>Pour Proposer des Quizz</p>
-         
-      </div>
-      <img class="avatar"  src="<?=PATH_POST."images".DIRECTORY_SEPARATOR."avatar.jpg"?>" alt="">
 
-      <div class="div-labint">
-          <label>
-              Prenom
-          </label>
-          <input type="text" name="prenom" placeholder="veiller saisir votre prenom">
+<div class="main-droite">
 
-          <label>
-              Nom
-          </label>
-          <input type="text" name="nom" placeholder="veiller saisir votre nom">
-          <label>
-              Login
-          </label>
-          <input type="email" name="email" placeholder="veiller saisir votre Email">
-          <label>
-              Password
-          </label>
-          <input type="password" name="password" placeholder="password">
-          <label>
-              Confirmer password
-          </label>
-          <input type="password" name="confirmpassword" placeholder="confirm-password">
-      </div>
-      <div class="fichier">
-      <h1>Avatar</h1>
-      <a href="">Choisir Fichier</a>
-      </div>
-      <button>Créer compte</button>
-    </form>
-          
-          </div>
+<?= $page  ?>
+
+</div>
+       
        </div>
     </div>
+     
+         
+         <?php require_once(PATH_TEMPLATES."include/footer.html.php"); ?> 

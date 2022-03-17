@@ -1,3 +1,3 @@
 <?php
     
-echo"ni l un ni l autre";
+echo"404 NOT found";

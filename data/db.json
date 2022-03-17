@@ -1,8 +1,23 @@
 {
-    "users":[
+    "users": [
         {
-            "email":"asamb650@gmail.com",
-            "password":"roosc9"
+            "nom": "Samb",
+            "prenom": "Ahmed",
+            "email": "asamb650@gmail.com",
+            "password": "roosc9",
+            "role": "ADMIN",
+            "score": "15",
+            "avatar": "asamb_ADMIN.jpg"
+        },
+      
+        {
+            "nom": "Cleo Castaneda",
+            "prenom": "vozokop123",
+            "email": "joqo@gmail.com",
+            "password": "vozokop123",
+            "role": "ADMIN",
+            "score": 0,
+            "avatar": "joqo_ADMIN.png"
         }
     ]
 }
